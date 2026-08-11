@@ -946,252 +946,475 @@
       <datasources>
         <datasource caption="Web Traffic (Enriched)" name="federated.webtraffic" />
       </datasources>
-      <zones is-pixels="true">
-        <zone h="52" id="1" type-v2="text" w="1280" x="0" y="0">
-          <formatted-text>
-            <run fontcolor="#111111" fontsize="22" fontname="Tableau Book" bold="true">Total Web Traffic</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#F7DFD1" />
-            <format attr="border-color" value="#F7DFD1" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
-        </zone>
-        <zone h="40" id="2" type-v2="text" w="824" x="18" y="64">
-          <formatted-text>
-            <run fontcolor="#FFFFFF" fontsize="13" fontname="Tableau Book" bold="true">FILTERS  •  Select one or multiple values</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#2B6596" />
-            <format attr="border-color" value="#2B6596" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="3" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign ID:nk]" type-v2="filter" w="260" x="18" y="110">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="4" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign Name:nk]" type-v2="filter" w="270" x="288" y="110">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="5" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign Duration:nk]" type-v2="filter" w="274" x="568" y="110">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="6" mode="range" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[day:Date:qk]" type-v2="filter" w="260" x="18" y="182">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="7" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Department:nk]" type-v2="filter" w="270" x="288" y="182">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="66" id="8" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Page Name:nk]" type-v2="filter" w="274" x="568" y="182">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#B8C2CC" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="34" id="9" type-v2="text" w="824" x="18" y="262">
-          <formatted-text>
-            <run fontcolor="#FFFFFF" fontsize="12" fontname="Tableau Book" bold="true">Graph 1: Traffic over time for all CET pages</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#C84E0E" />
-            <format attr="border-color" value="#C84E0E" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
-        </zone>
-        <zone h="215" id="10" name="Traffic Trend - All CET Pages" show-title="false" w="824" x="18" y="298">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="34" id="11" type-v2="text" w="824" x="18" y="524">
-          <formatted-text>
-            <run fontcolor="#FFFFFF" fontsize="12" fontname="Tableau Book" bold="true">Graph 2: Traffic over time for selected pages</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#C84E0E" />
-            <format attr="border-color" value="#C84E0E" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
-        </zone>
-        <zone h="222" id="12" name="Traffic Trend - Selected Pages" show-title="false" w="824" x="18" y="560">
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="40" id="13" type-v2="text" w="402" x="860" y="64">
-          <formatted-text>
-            <run fontcolor="#FFFFFF" fontsize="13" fontname="Tableau Book" bold="true">KEY METRICS</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#0F5B2A" />
-            <format attr="border-color" value="#0F5B2A" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
-        </zone>
-        <zone h="112" id="14" name="KPI - Page Name" show-title="true" w="402" x="860" y="110">
-          <zone-style>
-            <format attr="background-color" value="#0F5B2A" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="112" id="15" name="KPI - Total Page Views" show-title="true" w="402" x="860" y="232">
-          <zone-style>
-            <format attr="background-color" value="#0F5B2A" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="112" id="16" name="KPI - Total Unique Users" show-title="true" w="402" x="860" y="354">
-          <zone-style>
-            <format attr="background-color" value="#0F5B2A" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="112" id="17" name="KPI - Average Session Duration" show-title="true" w="402" x="860" y="476">
-          <zone-style>
-            <format attr="background-color" value="#0F5B2A" />
-            <format attr="border-color" value="#D6D9DE" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="4" />
-            <format attr="margin-right" value="4" />
-            <format attr="margin-top" value="4" />
-            <format attr="margin-bottom" value="4" />
-          </zone-style>
-        </zone>
-        <zone h="182" id="18" type-v2="text" w="402" x="860" y="600">
-          <formatted-text>
-            <run fontcolor="#364152" fontsize="10" fontname="Tableau Book" bold="false">Data: Mock_WebTraffic.csv enriched from the campaign Master sheet.
+      <zones>
+        <zone friendly-name="Dashboard" h="100000" id="100" type-v2="layout-basic" w="100000" x="0" y="0">
+          <zone friendly-name="V-root" h="100000" id="101" param="vert" type-v2="layout-flow" w="100000" x="0" y="0">
+            <zone fixed-size="52" h="6500" id="102" is-fixed="true" type-v2="text" w="100000" x="0" y="0">
+              <formatted-text>
+                <run fontcolor="#111111" fontsize="22" fontname="Tableau Book" bold="true">Total Web Traffic</run>
+              </formatted-text>
+              <zone-style>
+                <format attr="background-color" value="#F7DFD1" />
+                <format attr="border-color" value="#F7DFD1" />
+                <format attr="border-style" value="solid" />
+                <format attr="border-width" value="1" />
+                <format attr="margin" value="8" />
+              </zone-style>
+            </zone>
+            <zone friendly-name="H-body" h="93500" id="103" param="horz" type-v2="layout-flow" w="100000" x="0" y="6500">
+              <zone friendly-name="LEFT" h="93500" id="104" param="vert" type-v2="layout-flow" w="64375" x="0" y="6500">
+                <zone fixed-size="40" h="5000" id="105" is-fixed="true" type-v2="text" w="64375" x="0" y="6500">
+                  <formatted-text>
+                    <run fontcolor="#FFFFFF" fontsize="13" fontname="Tableau Book" bold="true">FILTERS  •  Select one or multiple values</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#2B6596" />
+                    <format attr="border-color" value="#2B6596" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="8" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="66" friendly-name="filter-row-1" h="8250" id="106" is-fixed="true" param="horz" type-v2="layout-flow" w="64375" x="0" y="11500">
+                  <zone h="8250" id="107" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign ID:nk]" type-v2="filter" w="21458" x="0" y="11500">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                  <zone h="8250" id="108" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign Name:nk]" type-v2="filter" w="21458" x="21458" y="11500">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                  <zone h="8250" id="109" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Campaign Duration:nk]" type-v2="filter" w="21459" x="42917" y="11500">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+                </zone>
+                <zone fixed-size="66" friendly-name="filter-row-2" h="8250" id="110" is-fixed="true" param="horz" type-v2="layout-flow" w="64375" x="0" y="19750">
+                  <zone h="8250" id="111" mode="range" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[day:Date:qk]" type-v2="filter" w="21458" x="0" y="19750">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                  <zone h="8250" id="112" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Department:nk]" type-v2="filter" w="21458" x="21458" y="19750">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                  <zone h="8250" id="113" mode="checkdropdown" name="Traffic Trend - Selected Pages" param="[federated.webtraffic].[none:Page Name:nk]" type-v2="filter" w="21459" x="42917" y="19750">
+                    <zone-style>
+                      <format attr="background-color" value="#FFFFFF" />
+                      <format attr="border-color" value="#B8C2CC" />
+                      <format attr="border-style" value="solid" />
+                      <format attr="border-width" value="1" />
+                      <format attr="margin" value="4" />
+                    </zone-style>
+                  </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+                </zone>
+                <zone fixed-size="34" h="4250" id="114" is-fixed="true" type-v2="text" w="64375" x="0" y="28000">
+                  <formatted-text>
+                    <run fontcolor="#FFFFFF" fontsize="12" fontname="Tableau Book" bold="true">Graph 1: Traffic over time for all CET pages</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#C84E0E" />
+                    <format attr="border-color" value="#C84E0E" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="8" />
+                  </zone-style>
+                </zone>
+                <zone h="30000" id="115" name="Traffic Trend - All CET Pages" show-title="false" w="64375" x="0" y="32250">
+                  <zone-style>
+                    <format attr="background-color" value="#FFFFFF" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="34" h="4250" id="116" is-fixed="true" type-v2="text" w="64375" x="0" y="62250">
+                  <formatted-text>
+                    <run fontcolor="#FFFFFF" fontsize="12" fontname="Tableau Book" bold="true">Graph 2: Traffic over time for selected pages</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#C84E0E" />
+                    <format attr="border-color" value="#C84E0E" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="8" />
+                  </zone-style>
+                </zone>
+                <zone h="31000" id="117" name="Traffic Trend - Selected Pages" show-title="false" w="64375" x="0" y="66500">
+                  <zone-style>
+                    <format attr="background-color" value="#FFFFFF" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+              <zone fixed-size="420" friendly-name="RIGHT" h="93500" id="118" is-fixed="true" param="vert" type-v2="layout-flow" w="31406" x="67188" y="6500">
+                <zone fixed-size="40" h="5000" id="119" is-fixed="true" type-v2="text" w="31406" x="67188" y="6500">
+                  <formatted-text>
+                    <run fontcolor="#FFFFFF" fontsize="13" fontname="Tableau Book" bold="true">KEY METRICS</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#0F5B2A" />
+                    <format attr="border-color" value="#0F5B2A" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="8" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="112" h="14000" id="120" is-fixed="true" name="KPI - Page Name" show-title="true" w="31406" x="67188" y="11500">
+                  <zone-style>
+                    <format attr="background-color" value="#0F5B2A" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="112" h="14000" id="121" is-fixed="true" name="KPI - Total Page Views" show-title="true" w="31406" x="67188" y="25500">
+                  <zone-style>
+                    <format attr="background-color" value="#0F5B2A" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="112" h="14000" id="122" is-fixed="true" name="KPI - Total Unique Users" show-title="true" w="31406" x="67188" y="39500">
+                  <zone-style>
+                    <format attr="background-color" value="#0F5B2A" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone fixed-size="112" h="14000" id="123" is-fixed="true" name="KPI - Average Session Duration" show-title="true" w="31406" x="67188" y="53500">
+                  <zone-style>
+                    <format attr="background-color" value="#0F5B2A" />
+                    <format attr="border-color" value="#D6D9DE" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="4" />
+                  </zone-style>
+                </zone>
+                <zone h="26500" id="124" type-v2="text" w="31406" x="67188" y="67500">
+                  <formatted-text>
+                    <run fontcolor="#364152" fontsize="10" fontname="Tableau Book" bold="false">Data: Mock_WebTraffic.csv enriched from the campaign Master sheet.
 Date coverage: 2024-01-01 to 2025-03-31.
 Average duration is sessions-weighted.
 CET pages are paths containing ‘adult-learner’.</run>
-          </formatted-text>
-          <zone-style>
-            <format attr="background-color" value="#FFFFFF" />
-            <format attr="border-color" value="#FFFFFF" />
-            <format attr="border-style" value="solid" />
-            <format attr="border-width" value="1" />
-            <format attr="margin-left" value="8" />
-            <format attr="margin-right" value="8" />
-            <format attr="margin-top" value="8" />
-            <format attr="margin-bottom" value="8" />
-          </zone-style>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr="background-color" value="#FFFFFF" />
+                    <format attr="border-color" value="#FFFFFF" />
+                    <format attr="border-style" value="solid" />
+                    <format attr="border-width" value="1" />
+                    <format attr="margin" value="8" />
+                  </zone-style>
+                </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+              </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+            </zone>
+                <zone-style>
+                  <format attr="border-color" value="#000000" />
+                  <format attr="border-style" value="none" />
+                  <format attr="border-width" value="0" />
+                  <format attr="margin" value="4" />
+                </zone-style>
+          </zone>
         </zone>
       </zones>
       <simple-id uuid="{4F17E3A8-2355-4B24-B542-F0C6CF82C88E}" />
     </dashboard>
   </dashboards>
   <windows source-height="156">
+    <window class="worksheet" name="Traffic Trend - All CET Pages">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{D7256731-E956-4E8B-8887-CC64BB53DAD5}" />
+    </window>
+    <window class="worksheet" name="Traffic Trend - Selected Pages">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{808A4DDD-D3EA-4A80-8674-A4B13FC1B10E}" />
+    </window>
+    <window class="worksheet" name="KPI - Page Name">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{CA005CED-4D39-4B7E-86DE-14E85DADDD65}" />
+    </window>
+    <window class="worksheet" name="KPI - Total Page Views">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{569026E0-190B-42E3-A87A-765245090EB0}" />
+    </window>
+    <window class="worksheet" name="KPI - Total Unique Users">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{D90DCF9B-ECF2-49DA-9E39-2E28F3EB8E85}" />
+    </window>
+    <window class="worksheet" name="KPI - Average Session Duration">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{CC185BE9-18E3-41CC-A9A7-635179FA1D93}" />
+    </window>
+    <window class="worksheet" name="Page Performance Detail">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{C166490D-65CC-493E-90CE-C2963C7A08E1}" />
+    </window>
+    <window class="worksheet" name="Campaign Master Lookup">
+      <cards>
+        <edge name="left">
+          <strip size="160">
+            <card type="pages" />
+            <card type="filters" />
+            <card type="marks" />
+          </strip>
+        </edge>
+        <edge name="top">
+          <strip size="2147483647">
+            <card type="columns" />
+          </strip>
+          <strip size="2147483647">
+            <card type="rows" />
+          </strip>
+          <strip size="31">
+            <card type="title" />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type="entire-view" />
+      </viewpoint>
+      <simple-id uuid="{81FECACE-649C-4C77-9AC6-8DE835D3DE4B}" />
+    </window>
     <window class="dashboard" name="Dashboard 1 - Web Traffic">
-      <viewpoints />
-      <active id="10" />
+      <viewpoints>
+        <viewpoint name="Traffic Trend - All CET Pages">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="Traffic Trend - Selected Pages">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="KPI - Page Name">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="KPI - Total Page Views">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="KPI - Total Unique Users">
+          <zoom type="entire-view" />
+        </viewpoint>
+        <viewpoint name="KPI - Average Session Duration">
+          <zoom type="entire-view" />
+        </viewpoint>
+      </viewpoints>
+      <active id="100" />
       <simple-id uuid="{26D9A9A2-F063-4E43-8BA5-00B9BAE60CB5}" />
     </window>
   </windows>
