@@ -1,0 +1,185 @@
+/* AuthPulse — shared brand styling (.NET Razor build) */
+:root {
+  --indigo: #6366F1;
+  --indigo-dark: #4F46E5;
+  --teal: #14B8A6;
+  --bg: #0F172A;
+  --surface: #1E293B;
+  --border: #334155;
+  --text: #F1F5F9;
+  --muted: #94A3B8;
+  --amber: #F59E0B;
+  --red: #EF4444;
+  --grad: linear-gradient(135deg, #6366F1 0%, #14B8A6 100%);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.glow {
+  position: fixed;
+  inset: -20% -20% auto -20%;
+  height: 60vh;
+  background: radial-gradient(50% 60% at 50% 0%, rgba(99, 102, 241, .35), transparent 70%),
+              radial-gradient(40% 50% at 80% 10%, rgba(20, 184, 166, .25), transparent 70%);
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.topbar, .wrap, .footer { position: relative; z-index: 1; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+.wordmark { font-weight: 800; font-size: 20px; letter-spacing: -.02em; }
+.grad {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stack-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 24px 24px 48px; width: 100%; flex: 1; }
+
+.hero { text-align: center; margin: 24px 0 28px; }
+.hero h1 { font-size: clamp(28px, 6vw, 44px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.03em; }
+.sub { color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.6; }
+.sub code { background: var(--surface); padding: 2px 6px; border-radius: 6px; font-size: .9em; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 24px 60px -30px rgba(0,0,0,.7);
+}
+.field-label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  padding: 14px;
+  font-family: ui-monospace, "JetBrains Mono", Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.5;
+}
+textarea:focus { outline: none; border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(99,102,241,.25); }
+
+.options { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.options label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--muted); font-weight: 600; }
+.options select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: var(--grad);
+  cursor: pointer;
+  transition: transform .05s ease, filter .15s ease;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn:active { transform: translateY(1px); }
+
+.error { color: var(--red); font-size: 14px; margin: 14px 0 0; font-weight: 500; }
+
+.result { display: flex; align-items: center; gap: 22px; margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--border); }
+.ring-wrap { position: relative; width: 96px; height: 96px; flex-shrink: 0; }
+.ring { width: 96px; height: 96px; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: var(--border); stroke-width: 8; }
+.ring-progress {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear, stroke .3s ease;
+}
+.countdown {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: ui-monospace, "JetBrains Mono", monospace;
+  font-weight: 600; font-size: 24px;
+}
+.token-block { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.token-label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.token-row { display: flex; align-items: center; gap: 12px; }
+.token {
+  font-family: ui-monospace, "JetBrains Mono", monospace;
+  font-size: clamp(34px, 9vw, 46px);
+  font-weight: 600;
+  letter-spacing: .12em;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.copy {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+.copy:hover { border-color: var(--indigo); }
+.copy.copied { color: var(--teal); border-color: var(--teal); }
+.meta { font-size: 12px; color: var(--muted); }
+
+.try { text-align: center; margin-top: 20px; color: var(--muted); font-size: 14px; }
+.link { background: none; border: none; color: var(--indigo); font-weight: 600; cursor: pointer; font-size: 14px; }
+.link:hover { text-decoration: underline; }
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 24px;
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+}
+.footer .dot { opacity: .5; }
+
+@media (max-width: 480px) {
+  .result { flex-direction: column; text-align: center; }
+}
