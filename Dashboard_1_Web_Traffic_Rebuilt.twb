@@ -317,7 +317,7 @@
       <column caption="Average Session Duration" datatype="real" name="[Calculation_WeightedDuration]" role="measure" type="quantitative" default-format="N1">
         <calculation class="tableau" formula="IF SUM([Sessions]) = 0 THEN 0 ELSE SUM([Avg Session Duration (Seconds)] * [Sessions]) / SUM([Sessions]) END" />
       </column>
-      <column caption="Page Name" datatype="string" name="[Calculation_PageSelection]" role="dimension" type="nominal">
+      <column caption="Page Name" datatype="string" name="[Calculation_PageSelection]" role="measure" type="nominal">
         <calculation class="tableau" formula="IF COUNTD([Page Name]) = 1 THEN MIN([Page Name]) ELSE STR(COUNTD([Page Name])) + &quot; pages selected&quot; END" />
       </column>
       <column caption="WebTraffic_Enriched.csv" datatype="table" name="[__tableau_internal_object_id__].[WebTraffic_Enriched_6F8738C81D5E4BE4A5085F1342BEA9F1]" role="measure" type="quantitative" />
@@ -507,7 +507,7 @@
             <column datatype="date" name="[Date]" role="dimension" type="ordinal" />
             <column datatype="string" name="[Department]" role="dimension" type="nominal" />
             <column datatype="string" name="[Page Name]" role="dimension" type="nominal" />
-            <column datatype="string" name="[Calculation_PageSelection]" role="dimension" type="nominal" caption="Page Name">
+            <column datatype="string" name="[Calculation_PageSelection]" role="measure" type="nominal" caption="Page Name">
               <calculation class="tableau" formula="IF COUNTD([Page Name]) = 1 THEN MIN([Page Name]) ELSE STR(COUNTD([Page Name])) + &quot; pages selected&quot; END" />
             </column>
             <column-instance column="[Campaign ID]" derivation="None" name="[none:Campaign ID:nk]" pivot="key" type="nominal" />
