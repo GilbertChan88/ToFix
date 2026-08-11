@@ -1,0 +1,100 @@
+@page
+@model IndexModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@Model.Brand — @Model.Tagline</title>
+    <meta name="description" content="@Model.Brand: @Model.Tagline A free, privacy-first TOTP two-factor code generator." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/authpulse.css" />
+    <link rel="icon" href="~/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+    <div class="glow"></div>
+    <header class="topbar">
+        <a class="brand" href="/">
+            <img src="~/logo.svg" alt="" width="34" height="34" />
+            <span class="wordmark">Auth<span class="grad">Pulse</span></span>
+        </a>
+        <span class="stack-badge">@Model.Stack</span>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <h1>Your 2FA codes, <span class="grad">in a heartbeat.</span></h1>
+            <p class="sub">Paste a Base32 secret key or an <code>otpauth://</code> link to get a live
+                time-based one-time password. This front-end calls the AuthPulse Web API — nothing is stored.</p>
+        </section>
+
+        <section class="card">
+            <label class="field-label" for="secret">2FA secret key or otpauth URI</label>
+            <textarea id="secret" rows="3" spellcheck="false" autocomplete="off"
+                      placeholder="e.g. JBSWY3DPEHPK3PXP  —or—  otpauth://totp/AuthPulse:you@example.com?secret=..."></textarea>
+
+            <div class="options">
+                <label>Digits
+                    <select id="digits">
+                        <option value="6" selected>6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </label>
+                <label>Period (s)
+                    <select id="period">
+                        <option value="30" selected>30</option>
+                        <option value="60">60</option>
+                    </select>
+                </label>
+                <label>Algorithm
+                    <select id="algorithm">
+                        <option value="SHA1" selected>SHA1</option>
+                        <option value="SHA256">SHA256</option>
+                        <option value="SHA512">SHA512</option>
+                    </select>
+                </label>
+            </div>
+
+            <button id="generate" class="btn">Generate code</button>
+            <p id="error" class="error" hidden></p>
+
+            <div id="result" class="result" hidden>
+                <div class="ring-wrap">
+                    <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+                        <circle class="ring-track" cx="60" cy="60" r="52"></circle>
+                        <circle id="ringProgress" class="ring-progress" cx="60" cy="60" r="52"></circle>
+                    </svg>
+                    <span id="countdown" class="countdown">30</span>
+                </div>
+                <div class="token-block">
+                    <span class="token-label">Current code</span>
+                    <div class="token-row">
+                        <output id="token" class="token">------</output>
+                        <button id="copy" class="copy" title="Copy code" aria-label="Copy code">Copy</button>
+                    </div>
+                    <span id="meta" class="meta"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="try">
+            <span>No secret handy?</span>
+            <button class="link" id="demo">Try a demo secret</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>@Model.Brand · Reference build in @Model.Stack</span>
+        <span class="dot">•</span>
+        <span>RFC 6238 TOTP · zero storage</span>
+    </footer>
+
+    <script src="~/js/authpulse.js"></script>
+</body>
+</html>

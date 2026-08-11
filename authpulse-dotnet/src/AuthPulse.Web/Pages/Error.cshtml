@@ -1,0 +1,31 @@
+@page
+@model ErrorModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Error";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AuthPulse — Error</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/authpulse.css" />
+    <link rel="icon" href="~/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+    <div class="glow"></div>
+    <main class="wrap">
+        <section class="hero">
+            <h1>Something went <span class="grad">off-beat.</span></h1>
+            <p class="sub">An error occurred while processing your request.</p>
+            @if (Model.ShowRequestId)
+            {
+                <p class="sub"><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+            }
+            <p class="try"><a class="link" href="/">← Back to AuthPulse</a></p>
+        </section>
+    </main>
+</body>
+</html>
