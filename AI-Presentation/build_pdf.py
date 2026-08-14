@@ -28,6 +28,13 @@ JOBS = [
         "PRESENTER Cockpit (Confidential)  ·  Using AI in Our Lives",
         "#1E6FB8",  # blue accent for presenter
     ),
+    (
+        "06-tutor-demo-guide.md",
+        "06-tutor-demo-guide.pdf",
+        "Tutor Demo Guide",
+        "Click-by-Click Instructions  ·  Using AI in Our Lives",
+        "#14B8B0",  # teal accent for the tutor guide
+    ),
 ]
 
 CSS_TEMPLATE = """

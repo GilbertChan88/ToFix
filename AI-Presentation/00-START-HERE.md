@@ -15,6 +15,9 @@ Built on the assumption that **your audience only has free AI tools**. Unbiased 
 | **`03-tool-cheatsheet.md`** | One-page-per-topic comparison of free tools | Hand out / email to attendees afterward |
 | **`04-demo-runbook-AUDIENCE.md`** | Clean follow-along demo guide with copy-paste prompts + timing | **Distribute to the audience** (print/PDF/email) |
 | **`05-demo-runbook-PRESENTER.md`** | Full operational demo runbook: setup, minute-by-minute cues, fallbacks, troubleshooting | **Your cockpit — keep private** |
+| **`06-tutor-demo-guide.md`** | Click-by-click tutor guide: exact button/type/expect/say steps with a running clock | **Operate the laptop live** (button-level script) |
+| **`*.pdf`** | Print-ready themed PDF exports of files 04, 05, 06 | Hand out / print / read offline |
+| **`build_pptx.py` / `build_pdf.py`** | Generator scripts (re-run after editing the markdown) | Regenerate the deck & PDFs |
 | **`demo-materials/demo1-source-reading.md`** | Messy notes on "The Science of Sleep" | Feed into Gamma (Demo 1) |
 | **`demo-materials/demo2-study-source.md`** | Explainer on "How Memory Works" | Upload to NotebookLM (Demo 2) |
 | **`demo-materials/demo3-email-scenario.md`** | Meeting scenario + sample email | Run the Gmail+Calendar+Meet demo (Demo 3) |
