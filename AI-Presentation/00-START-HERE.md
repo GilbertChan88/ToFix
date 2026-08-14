@@ -13,6 +13,8 @@ Built on the assumption that **your audience only has free AI tools**. Unbiased 
 | **`01-presentation-with-speaker-notes.md`** | The full 24-slide deck + word-for-word speaker notes + timing | Build your slides and know exactly what to say |
 | **`02-demo-runsheet.md`** | Step-by-step for all 4 live demos: prep, prompts, wow moments, fallbacks | Run the demos smoothly |
 | **`03-tool-cheatsheet.md`** | One-page-per-topic comparison of free tools | Hand out / email to attendees afterward |
+| **`04-demo-runbook-AUDIENCE.md`** | Clean follow-along demo guide with copy-paste prompts + timing | **Distribute to the audience** (print/PDF/email) |
+| **`05-demo-runbook-PRESENTER.md`** | Full operational demo runbook: setup, minute-by-minute cues, fallbacks, troubleshooting | **Your cockpit — keep private** |
 | **`demo-materials/demo1-source-reading.md`** | Messy notes on "The Science of Sleep" | Feed into Gamma (Demo 1) |
 | **`demo-materials/demo2-study-source.md`** | Explainer on "How Memory Works" | Upload to NotebookLM (Demo 2) |
 | **`demo-materials/demo3-email-scenario.md`** | Meeting scenario + sample email | Run the Gmail+Calendar+Meet demo (Demo 3) |
